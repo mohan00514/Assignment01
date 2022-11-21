@@ -8,7 +8,6 @@ class Folder{
     private $fileType;
     private $file_array; 
 
-
     function __construct($folderName,$createdDate, $folderOwner,$fileType,){
         $this->folderName = $folderName;
         $this->createdDate = $createdDate;
@@ -60,7 +59,7 @@ class Folder{
     
     
     
-    public function insertFile(File $file, ){
+    public function insertFile(File $file){
             $this->file_array[$file->get_file_name()] = $file;
     }
     
@@ -68,13 +67,6 @@ class Folder{
         unset($this->file_array [$file->get_file_name()]);
         
                
-    }
-
-    public function getFile(File $file){
-        
-        return $this->file_array[$file->get_file_name()];
-        
-
     }
 }
 
