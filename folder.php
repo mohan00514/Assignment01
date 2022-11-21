@@ -68,6 +68,10 @@ class Folder{
         
                
     }
+    public function getFile(File $file){
+        return $this->file_array[$file->get_file_name()] ;
+
+    }
 }
 
 $folder1 =new Folder("www","22/09/2022","dave","videos");

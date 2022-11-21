@@ -23,9 +23,6 @@ class FolderTray{
         $this->top++;
         $this->arr[$this->top] = $item;
         return $item;
-       
-       
-
     }
     
     public function pop() {
@@ -35,10 +32,16 @@ class FolderTray{
            
             $x =array_pop($this->arr);
             return $x;
-           
         }    
     }
 
+    public function peek(){
+        if($this->top == -1) {
+            echo "Stack is empty. <br>";
+        } else {
+            return current ($this->arr);
+        }
+    }
 }
 	
 $tray1 =new FolderTray();
@@ -55,6 +58,6 @@ echo "<br/>";
 echo "<pre>";
 print_r($tray1->getArr());
 echo "<pre>";
-//echo "<br/>";
-
+echo "<br/>";
+echo $tray1->peek();
  
